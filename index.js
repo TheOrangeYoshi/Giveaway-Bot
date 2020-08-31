@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const { prefix, token } = require('./config.json');
+const {prefix} = require('./config.json');
 
 client.on('ready', () => {
   console.log(`Bot tag: ${client.user.tag}`);
@@ -85,4 +85,4 @@ client.on('message', async message => {
   }
 });
 
-client.login(TOKEN);
+client.login(process.env.TOKEN);
